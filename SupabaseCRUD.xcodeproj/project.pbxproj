@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90B932842A1B1A1B005925C1 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B932832A1B1A1B005925C1 /* Todo.swift */; };
+		90B932862A1B1CDB005925C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B932852A1B1CDB005925C1 /* Constants.swift */; };
 		90BDA2472A1A6E5900867C83 /* SupabaseCRUDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BDA2462A1A6E5900867C83 /* SupabaseCRUDApp.swift */; };
 		90BDA2492A1A6E5900867C83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BDA2482A1A6E5900867C83 /* ContentView.swift */; };
 		90BDA24B2A1A6E5A00867C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BDA24A2A1A6E5A00867C83 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90B932832A1B1A1B005925C1 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		90B932852A1B1CDB005925C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		90BDA2432A1A6E5900867C83 /* SupabaseCRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupabaseCRUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BDA2462A1A6E5900867C83 /* SupabaseCRUDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseCRUDApp.swift; sourceTree = "<group>"; };
 		90BDA2482A1A6E5900867C83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90B932822A1B1A11005925C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90B932832A1B1A1B005925C1 /* Todo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		90BDA23A2A1A6E5900867C83 = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +65,10 @@
 		90BDA2452A1A6E5900867C83 /* SupabaseCRUD */ = {
 			isa = PBXGroup;
 			children = (
+				90B932822A1B1A11005925C1 /* Models */,
 				90BDA2462A1A6E5900867C83 /* SupabaseCRUDApp.swift */,
 				90BDA2482A1A6E5900867C83 /* ContentView.swift */,
+				90B932852A1B1CDB005925C1 /* Constants.swift */,
 				90BDA24A2A1A6E5A00867C83 /* Assets.xcassets */,
 				90BDA24C2A1A6E5A00867C83 /* Preview Content */,
 			);
@@ -146,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				90BDA2492A1A6E5900867C83 /* ContentView.swift in Sources */,
+				90B932842A1B1A1B005925C1 /* Todo.swift in Sources */,
 				90BDA2472A1A6E5900867C83 /* SupabaseCRUDApp.swift in Sources */,
+				90B932862A1B1CDB005925C1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
