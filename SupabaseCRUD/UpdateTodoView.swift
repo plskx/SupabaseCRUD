@@ -6,42 +6,6 @@
 
 import SwiftUI
 
-//struct UpdateTodoView: View {
-//    @StateObject var model = TodoViewModel()
-//    @Environment(\.dismiss) var dismiss
-//
-//    @State private var newTitle = ""
-//    @State private var done = false
-//
-//    let types = [true, false]
-//    let todo: Todo
-//
-//    var body: some View {
-//        NavigationView {
-//            Form {
-//                TextField(todo.title, text: $newTitle)
-//                    .autocorrectionDisabled(true)
-//
-//                Picker("Done", selection: $done) {
-//                    ForEach(types, id: \.self) {
-//                        Text(String($0))
-//                    }
-//                }
-//            }
-//            .navigationTitle("Update \(todo.title)")
-//            .toolbar {
-//                Button("Save") {
-//                    if newTitle.isEmpty {
-//                        newTitle = "Unknown"
-//                    }
-//                    model.updateTodos(id: todo.id, newTitle: newTitle)
-//                    dismiss()
-//                }
-//            }
-//        }
-//    }
-//}
-
 struct UpdateTodoView: View {
     @StateObject var model: TodoViewModel
     @Environment(\.dismiss) var dismiss
