@@ -13,7 +13,7 @@ class TodoViewModel: ObservableObject {
     
     @Published var todos: [Todo] = []
     
-    func createTodo(id: Int, title: String) {
+    func createTodo(id: UUID, title: String) {
         let todo = Todo(id: id, title: title, done: false)
         
         let query = client
@@ -62,8 +62,8 @@ class TodoViewModel: ObservableObject {
     //            }
     //        }
     
-    func updateTodos(id: Int) {
-        let updateData = Todo(id: id, title: "Updated title", done: true)
+    func updateTodos(id: UUID, newTitle: String, done: Bool) {
+        let updateData = Todo(id: id, title: newTitle, done: true)
         let query = client
             .database
             .from("todos")
@@ -80,7 +80,7 @@ class TodoViewModel: ObservableObject {
         }
     }
     
-    func deleteTodos(id: Int) {
+    func deleteTodos(id: UUID) {
         let query = client.database
             .from("todos")
             .delete()

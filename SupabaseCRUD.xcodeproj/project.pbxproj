@@ -15,6 +15,7 @@
 		90BDA24B2A1A6E5A00867C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BDA24A2A1A6E5A00867C83 /* Assets.xcassets */; };
 		90BDA24E2A1A6E5A00867C83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BDA24D2A1A6E5A00867C83 /* Preview Assets.xcassets */; };
 		90BDA2562A1A74BD00867C83 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 90BDA2552A1A74BD00867C83 /* Supabase */; };
+		90D6FF122A1B5C9B006DA2B4 /* UpdateTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6FF112A1B5C9B006DA2B4 /* UpdateTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		90BDA2482A1A6E5900867C83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90BDA24A2A1A6E5A00867C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90BDA24D2A1A6E5A00867C83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90D6FF112A1B5C9B006DA2B4 /* UpdateTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				90BDA2462A1A6E5900867C83 /* SupabaseCRUDApp.swift */,
 				90B932872A1B3AED005925C1 /* TodoViewModel.swift */,
 				90BDA2482A1A6E5900867C83 /* ContentView.swift */,
+				90D6FF112A1B5C9B006DA2B4 /* UpdateTodoView.swift */,
 				90B932852A1B1CDB005925C1 /* Constants.swift */,
 				90BDA24A2A1A6E5A00867C83 /* Assets.xcassets */,
 				90BDA24C2A1A6E5A00867C83 /* Preview Content */,
@@ -167,6 +170,7 @@
 				90BDA2472A1A6E5900867C83 /* SupabaseCRUDApp.swift in Sources */,
 				90B932862A1B1CDB005925C1 /* Constants.swift in Sources */,
 				90B932882A1B3AED005925C1 /* TodoViewModel.swift in Sources */,
+				90D6FF122A1B5C9B006DA2B4 /* UpdateTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

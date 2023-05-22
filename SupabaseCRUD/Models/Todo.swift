@@ -7,7 +7,7 @@
 import Foundation
 
 struct Todo: Identifiable, Codable {
-    let id: Int
+    let id: UUID
     let title: String
     let done: Bool
 }
