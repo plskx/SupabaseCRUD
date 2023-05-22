@@ -63,7 +63,7 @@ class TodoViewModel: ObservableObject {
     //        }
     
     func updateTodos(id: UUID, newTitle: String, done: Bool) {
-        let updateData = Todo(id: id, title: newTitle, done: true)
+        let updateData = Todo(id: id, title: newTitle, done: done)
         let query = client
             .database
             .from("todos")
