@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var model = TodoViewModel()
+    @State private var todos: [Todo] = []
     @State private var title = ""
     @State private var showingUpdateTodo = false
     
@@ -19,16 +19,19 @@ struct ContentView: View {
                 Section {
                     TextField("Enter your todo", text: $title)
                         .autocapitalization(.none)
-                        .autocorrectionDisabled(true)
+                        .autocorrectionDisabled()
                 }
                 
                 Section {
-                    ForEach(model.todos) { todo in
+                    ForEach(todos) { todo in
                         HStack {
                             Text(todo.title)
                                 .swipeActions {
                                     Button("Delete", role: .destructive) {
-                                        model.deleteTodos(id: todo.id)
+                                        Task {
+                                            await deleteTodo(id: todo.id)
+                                            self.todos = await getTodos()
+                                        }
                                     }
                                     
                                     Button("Update") {
@@ -44,26 +47,33 @@ struct ContentView: View {
             }
             .navigationTitle("Rakun Todolist")
             .onSubmit {
-                model.createTodo(id: UUID(), title: title)
-                title = ""
+                print("current title: \(title)")
+                
+                Task {
+                    await createTodo(id: UUID(), title: title)
+                    self.todos = await getTodos()
+                    title = ""
+                }
             }
             .refreshable {
-                try? await model.getTodos()
+                Task {
+                    self.todos = await getTodos()
+                }
             }
-            
         }
         .task {
-            try? await model.getTodos()
+            self.todos = await getTodos()
         }
         .sheet(item: $selectedTodo) { todo in
             UpdateTodoView(todo: todo)
         }
     }
-    
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
+
+

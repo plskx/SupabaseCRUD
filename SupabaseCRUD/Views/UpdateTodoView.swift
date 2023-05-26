@@ -7,7 +7,6 @@
 import SwiftUI
 
 struct UpdateTodoView: View {
-    @StateObject var model: TodoViewModel
     @Environment(\.dismiss) var dismiss
     
     @State private var newTitle: String
@@ -20,14 +19,14 @@ struct UpdateTodoView: View {
         self.todo = todo
         self._newTitle = State(initialValue: todo.title)
         self._done = State(initialValue: todo.done)
-        self._model = StateObject(wrappedValue: TodoViewModel())
     }
     
     var body: some View {
         NavigationView {
             Form {
                 TextField("New Title", text: $newTitle)
-                    .autocorrectionDisabled(true)
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled()
                 
                 Picker("Done", selection: $done) {
                     ForEach(types, id: \.self) { value in
@@ -41,17 +40,18 @@ struct UpdateTodoView: View {
                     if newTitle.isEmpty {
                         newTitle = "Unknown"
                     }
-                    
-                    model.updateTodos(id: todo.id, newTitle: newTitle, done: done)
-                    dismiss()
+                    Task {
+                        await updateTodo(id: todo.id, newTitle: newTitle, done: done)
+                        dismiss()
+                    }
                 }
             }
         }
     }
 }
 
-//struct UpdateTodoView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UpdateTodoView(todo: Todo(id: UUID(), title: "Exercise", done: false))
-//    }
-//}
+struct UpdateTodoView_Previews: PreviewProvider {
+    static var previews: some View {
+        UpdateTodoView(todo: Todo(id: UUID(), title: "Example", done: true))
+    }
+}
