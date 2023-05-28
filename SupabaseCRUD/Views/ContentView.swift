@@ -60,6 +60,13 @@ struct ContentView: View {
                     self.todos = await getTodos()
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Text("Total: \(todos.count)")
+                        .font(.title2.bold())
+                }
+            }
+            
         }
         .task {
             self.todos = await getTodos()
