@@ -9,6 +9,7 @@ Rakun todolist
 ## Learn:
 
 - [x] Supabase Swift SDK
+- [x] MVVM to MV Pattern 
 
 ### Resource
 
