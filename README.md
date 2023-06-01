@@ -1,5 +1,15 @@
 # SupabaseCRUD
 
+Rakun todolist
+
+## Demo
+
+![image](https://github.com/plskx/SupabaseCRUD/assets/57343545/44a9986a-acb7-4938-8392-e27fa74baea2)
+
+## Learn:
+
+- [x] Supabase Swift SDK
+
 ### Resource
 
 - https://supabase.com/docs/reference/swift/introduction
